@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.4.22 <0.9.0;
+pragma experimental ABIEncoderV2;
 
 contract TodoList {
     struct Task {
@@ -13,6 +14,10 @@ contract TodoList {
     mapping(uint256 => Task) tasks;
     Task[] private completedTasks;
 
+    function helloWorld() external pure returns (string memory) {
+        return "Hello World from smart contract!";
+    }
+
     function getAllTasks() external view returns (Task[] memory) {
         Task[] memory allTasks = new Task[](taskCount);
         for (uint256 i = 0; i < taskCount; i++) {
@@ -25,7 +30,7 @@ contract TodoList {
         return completedTasks;
     }
 
-    function addTask(string memory _taskDescription) external {
+    function addTask(string calldata _taskDescription) external {
         Task memory newTask = Task(taskCount, _taskDescription, false);
         tasks[taskCount] = newTask;
         taskCount++;

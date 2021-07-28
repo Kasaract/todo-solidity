@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { ListGroup } from "react-bootstrap";
 
 export default function TaskItem({ status, desc }) {
 	const [completed, setCompleted] = useState(status);
 
 	const handleCheck = () => {
-		console.log(completed);
 		setCompleted(!completed);
 	};
 
