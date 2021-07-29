@@ -32,9 +32,9 @@
             "type": "string"
           },
           {
-            "internalType": "bool",
+            "internalType": "enum TodoList.Status",
             "name": "status",
-            "type": "bool"
+            "type": "uint8"
           }
         ],
         "internalType": "struct TodoList.Task[]",
@@ -64,9 +64,9 @@
             "type": "string"
           },
           {
-            "internalType": "bool",
+            "internalType": "enum TodoList.Status",
             "name": "status",
-            "type": "bool"
+            "type": "uint8"
           }
         ],
         "internalType": "struct TodoList.Task[]",
@@ -103,6 +103,21 @@
       }
     ],
     "name": "completeTask",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_taskId",
+        "type": "uint256"
+      }
+    ],
+    "name": "deleteTask",
     "outputs": [],
     "payable": false,
     "stateMutability": "nonpayable",

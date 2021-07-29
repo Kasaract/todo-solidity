@@ -13,7 +13,7 @@ const setDefaultAccount = async (web3) => {
 
 export default function App() {
 	const provider = new HDWalletProvider(
-		"spike ask sponsor skirt swift decade pipe milk text adult smoke pave",
+		"file mask carry stone found flat reflect october obtain visit olympic amazing",
 		"http://localhost:8545"
 	);
 	let web3 = new Web3(provider || Web3.givenProvider);
