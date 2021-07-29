@@ -76,8 +76,4 @@ contract TodoList {
         }
         t.status = Status.DELETED;
     }
-
-    // function updateTask(uint256 _taskId) external {
-    //     Task storage t = tasks[_taskId];
-    // }
 }
